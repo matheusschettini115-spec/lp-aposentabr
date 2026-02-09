@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Benefícios - Aposenta BR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '295243853557288');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=295243853557288&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-area">
+                <!-- Placeholder for Logo if image is present, or text -->
+                <span class="logo-text">Aposenta <span class="highlight">BR</span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+
+            <!-- STEP 1: QUIZ CONTAINER -->
+            <section id="quiz-container" class="card active">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+
+                <div id="question-1" class="question-step active">
+                    <h2>Qual a sua idade?</h2>
+                    <div class="options-grid">
+                        <button class="quiz-btn" onclick="nextQuestion(2)">Até 30 anos</button>
+                        <button class="quiz-btn" onclick="nextQuestion(2)">31 a 45 anos</button>
+                        <button class="quiz-btn" onclick="nextQuestion(2)">46 a 60 anos</button>
+                        <button class="quiz-btn" onclick="nextQuestion(2)">Acima de 60 anos</button>
+                    </div>
+                </div>
+
+                <div id="question-2" class="question-step">
+                    <h2>Você contribuiu para o INSS nos últimos 12 meses?</h2>
+                    <div class="options-grid">
+                        <button class="quiz-btn" onclick="nextQuestion(3)">Sim</button>
+                        <button class="quiz-btn" onclick="nextQuestion(3)">Não</button>
+                    </div>
+                </div>
+
+                <div id="question-3" class="question-step">
+                    <h2>Qual o principal motivo da sua busca hoje?</h2>
+                    <div class="options-vertical">
+                        <button class="quiz-btn danger-zone" onclick="finishQuiz(false)">
+                            Vale-gás, Bolsa Família ou Auxílios Sociais
+                        </button>
+                        <button class="quiz-btn success-zone" onclick="finishQuiz(true)">
+                            Problema de Saúde, Acidente ou Doença Ocupacional
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 2: DISQUALIFICATION SCREEN -->
+            <section id="disqualify-screen" class="card hidden">
+                <div class="status-icon error">
+                    <svg viewBox="0 0 24 24" width="64" height="64">
+                        <path fill="currentColor"
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                    </svg>
+                </div>
+                <h3>Atenção</h3>
+                <p>Infelizmente, no momento nossa consultoria é exclusiva para benefícios previdenciários por
+                    incapacidade (INSS) e não atendemos programas sociais do governo.</p>
+                <button class="restart-btn" onclick="restartQuiz()">Voltar ao Início</button>
+            </section>
+
+            <!-- STEP 3: SUCCESS SCREEN -->
+            <section id="success-screen" class="card hidden wide">
+                <div class="headline-box">
+                    <h1>Você pode ter direito!</h1>
+                    <p>Assista ao vídeo abaixo para entender o próximo passo.</p>
+                </div>
+
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IF5sEOIZ2Nw?si=PZuq5xeTtztIKHy5"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="form-wrapper">
+                    <div role="main" id="aposenta-br-aec5566204b8d30e600d"></div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Aposenta BR. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Form Script -->
+    <script type="text/javascript"
+        src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+    <script type="text/javascript">
+        // Wrapper checks if RDStationForms exists to prevent errors if blocked
+        if (typeof RDStationForms !== 'undefined') {
+            new RDStationForms('aposenta-br-aec5566204b8d30e600d', 'UA-126419904-2').createForm();
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
