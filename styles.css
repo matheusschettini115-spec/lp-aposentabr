@@ -221,11 +221,12 @@ body {
 
 .video-wrapper iframe {
     position: absolute;
-    top: 0;
+    top: 35%;
+    /* Shift up to hide top overlay */
     left: 0;
     width: 100%;
     height: 177.77%;
-    /* Force 9:16 ratio to crop bottom */
+    transform: translateY(-50%);
     border-radius: var(--radius);
 }
 
