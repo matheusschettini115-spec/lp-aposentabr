@@ -15,7 +15,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -104,10 +104,10 @@
                 </div>
 
                 <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IF5sEOIZ2Nw?si=PZuq5xeTtztIKHy5"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <video controls>
+                        <source src="videos/video apresentacao.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
                 </div>
 
                 <div class="form-wrapper">
