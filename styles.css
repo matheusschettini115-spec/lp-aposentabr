@@ -208,12 +208,12 @@ body {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 177.77%;
-    /* 9:16 Aspect Ratio for Shorts */
+    padding-bottom: 100%;
+    /* Square Aspect Ratio */
     height: 0;
     margin: 0 auto 30px;
-    max-width: 350px;
-    /* Limit width for vertical video on larger screens */
+    max-width: 400px;
+    /* Slightly wider for square */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: var(--radius);
     overflow: hidden;
@@ -224,7 +224,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 177.77%;
+    /* Force 9:16 ratio to crop bottom */
     border-radius: var(--radius);
 }
 
